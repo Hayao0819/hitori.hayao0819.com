@@ -1,6 +1,6 @@
 import type { PropsWithChildren } from "react";
 import "@/styles/global.css";
-import { Header } from "@components/Header";
+import { Header } from "@/components/Header";
 
 export default function PageLayout({
     children,
@@ -14,10 +14,10 @@ export default function PageLayout({
                     name="viewport"
                     content="width=device-width, initial-scale=1"
                 />
+                <title>{title}</title>
             </head>
             <body>
                 <Header />
-                <h1>{title}</h1>
                 <article>{children}</article>
             </body>
         </html>
